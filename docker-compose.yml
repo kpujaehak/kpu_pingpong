@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  ping:
+    build:
+      context: .
+      dockerfile: ./ping/Dockerfile
+    container_name: ping_con
+    volumes:
+      - ./ping:/app
+    ports:
+      - 5050:5000
+
+  pong:
+    build:
+      context: .
+      dockerfile: ./pong/Dockerfile
+    container_name: pong_con
+    volumes:
+      - ./pong:/app
+    depends_on:
+      - ping
+    ports:
+      - 5051:5001
