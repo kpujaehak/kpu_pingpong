@@ -1,6 +1,6 @@
 # kpu_pingpong
 
 
-    1. git clone https://github.com/kpujaehak/kpu_pingpong.git
+    1. git clone https://github.com/kpujaehak/kpu_pingpong
     2. cd kpu_pingpong
     3. docker-compose up --build -d
