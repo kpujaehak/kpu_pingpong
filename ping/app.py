@@ -9,7 +9,7 @@ def do_ping():
 		ping = '[kpu_ping] ---hello pong?-->'
 		response = ' '
 		try:
-			response = requests.get('http://pong_con:5001/pong')
+			response = requests.get('http://0.0.0.0:5001/pong')
 		except requests.exceptions.RequestException as e:
 			print('\n Cannot reach the pong service.\n')
 			return 'ERROR\n'
